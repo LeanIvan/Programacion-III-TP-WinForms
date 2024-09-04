@@ -12,6 +12,7 @@ namespace Vista
         /// Punto de entrada principal para la aplicación.
         /// </summary>
         [STAThread]
+        //COMENTARIO
         static void Main()
         {
             Application.EnableVisualStyles();
