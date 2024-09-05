@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvList = new System.Windows.Forms.DataGridView();
             this.GroupBox_Filtro = new System.Windows.Forms.GroupBox();
+            this.comboBoxMarcas = new System.Windows.Forms.ComboBox();
+            this.comboBoxCategorias = new System.Windows.Forms.ComboBox();
+            this.lbl_Marcas = new System.Windows.Forms.Label();
+            this.lbl_Categoria = new System.Windows.Forms.Label();
             this.Numeric_Max = new System.Windows.Forms.NumericUpDown();
             this.Numeric_Min = new System.Windows.Forms.NumericUpDown();
             this.lbl_Max = new System.Windows.Forms.Label();
             this.lbl_Min = new System.Windows.Forms.Label();
-            this.ListBox_Marcas = new System.Windows.Forms.ListBox();
-            this.ListBox_Categorias = new System.Windows.Forms.ListBox();
             this.txtBox_Buscar = new System.Windows.Forms.TextBox();
             this.btn_Buscar = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -47,44 +49,76 @@
             this.articuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lbl_Categoria = new System.Windows.Forms.Label();
-            this.lbl_Marcas = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.GroupBox_Filtro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_Min)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvList
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(244, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(544, 399);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvList.Location = new System.Drawing.Point(244, 39);
+            this.dgvList.Name = "dgvList";
+            this.dgvList.Size = new System.Drawing.Size(544, 399);
+            this.dgvList.TabIndex = 0;
             // 
             // GroupBox_Filtro
             // 
             this.GroupBox_Filtro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.GroupBox_Filtro.Controls.Add(this.comboBoxMarcas);
+            this.GroupBox_Filtro.Controls.Add(this.comboBoxCategorias);
             this.GroupBox_Filtro.Controls.Add(this.lbl_Marcas);
             this.GroupBox_Filtro.Controls.Add(this.lbl_Categoria);
             this.GroupBox_Filtro.Controls.Add(this.Numeric_Max);
             this.GroupBox_Filtro.Controls.Add(this.Numeric_Min);
             this.GroupBox_Filtro.Controls.Add(this.lbl_Max);
             this.GroupBox_Filtro.Controls.Add(this.lbl_Min);
-            this.GroupBox_Filtro.Controls.Add(this.ListBox_Marcas);
-            this.GroupBox_Filtro.Controls.Add(this.ListBox_Categorias);
             this.GroupBox_Filtro.Location = new System.Drawing.Point(12, 39);
             this.GroupBox_Filtro.Name = "GroupBox_Filtro";
             this.GroupBox_Filtro.Size = new System.Drawing.Size(157, 399);
             this.GroupBox_Filtro.TabIndex = 1;
             this.GroupBox_Filtro.TabStop = false;
             this.GroupBox_Filtro.Text = "Filtros";
+            // 
+            // comboBoxMarcas
+            // 
+            this.comboBoxMarcas.FormattingEnabled = true;
+            this.comboBoxMarcas.Location = new System.Drawing.Point(6, 124);
+            this.comboBoxMarcas.Name = "comboBoxMarcas";
+            this.comboBoxMarcas.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxMarcas.TabIndex = 9;
+            // 
+            // comboBoxCategorias
+            // 
+            this.comboBoxCategorias.FormattingEnabled = true;
+            this.comboBoxCategorias.Location = new System.Drawing.Point(6, 60);
+            this.comboBoxCategorias.Name = "comboBoxCategorias";
+            this.comboBoxCategorias.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxCategorias.TabIndex = 5;
+            // 
+            // lbl_Marcas
+            // 
+            this.lbl_Marcas.AutoSize = true;
+            this.lbl_Marcas.Location = new System.Drawing.Point(6, 99);
+            this.lbl_Marcas.Name = "lbl_Marcas";
+            this.lbl_Marcas.Size = new System.Drawing.Size(52, 13);
+            this.lbl_Marcas.TabIndex = 8;
+            this.lbl_Marcas.Text = "MARCAS";
+            // 
+            // lbl_Categoria
+            // 
+            this.lbl_Categoria.AutoSize = true;
+            this.lbl_Categoria.Location = new System.Drawing.Point(8, 41);
+            this.lbl_Categoria.Name = "lbl_Categoria";
+            this.lbl_Categoria.Size = new System.Drawing.Size(76, 13);
+            this.lbl_Categoria.TabIndex = 7;
+            this.lbl_Categoria.Text = "CATEGORIAS";
             // 
             // Numeric_Max
             // 
@@ -120,22 +154,6 @@
             this.lbl_Min.Size = new System.Drawing.Size(30, 13);
             this.lbl_Min.TabIndex = 2;
             this.lbl_Min.Text = "MIN-";
-            // 
-            // ListBox_Marcas
-            // 
-            this.ListBox_Marcas.FormattingEnabled = true;
-            this.ListBox_Marcas.Location = new System.Drawing.Point(7, 112);
-            this.ListBox_Marcas.Name = "ListBox_Marcas";
-            this.ListBox_Marcas.Size = new System.Drawing.Size(111, 17);
-            this.ListBox_Marcas.TabIndex = 1;
-            // 
-            // ListBox_Categorias
-            // 
-            this.ListBox_Categorias.FormattingEnabled = true;
-            this.ListBox_Categorias.Location = new System.Drawing.Point(6, 57);
-            this.ListBox_Categorias.Name = "ListBox_Categorias";
-            this.ListBox_Categorias.Size = new System.Drawing.Size(111, 17);
-            this.ListBox_Categorias.TabIndex = 0;
             // 
             // txtBox_Buscar
             // 
@@ -223,24 +241,6 @@
             this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.categoriaToolStripMenuItem.Text = "Categoria";
             // 
-            // lbl_Categoria
-            // 
-            this.lbl_Categoria.AutoSize = true;
-            this.lbl_Categoria.Location = new System.Drawing.Point(8, 41);
-            this.lbl_Categoria.Name = "lbl_Categoria";
-            this.lbl_Categoria.Size = new System.Drawing.Size(76, 13);
-            this.lbl_Categoria.TabIndex = 7;
-            this.lbl_Categoria.Text = "CATEGORIAS";
-            // 
-            // lbl_Marcas
-            // 
-            this.lbl_Marcas.AutoSize = true;
-            this.lbl_Marcas.Location = new System.Drawing.Point(8, 96);
-            this.lbl_Marcas.Name = "lbl_Marcas";
-            this.lbl_Marcas.Size = new System.Drawing.Size(52, 13);
-            this.lbl_Marcas.TabIndex = 8;
-            this.lbl_Marcas.Text = "MARCAS";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,13 +249,13 @@
             this.Controls.Add(this.btn_Buscar);
             this.Controls.Add(this.txtBox_Buscar);
             this.Controls.Add(this.GroupBox_Filtro);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvList);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
             this.GroupBox_Filtro.ResumeLayout(false);
             this.GroupBox_Filtro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_Max)).EndInit();
@@ -269,7 +269,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvList;
         private System.Windows.Forms.GroupBox GroupBox_Filtro;
         private System.Windows.Forms.TextBox txtBox_Buscar;
         private System.Windows.Forms.Button btn_Buscar;
@@ -280,8 +280,6 @@
         private System.Windows.Forms.ToolStripMenuItem categoríaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem articuToolStripMenuItem;
-        private System.Windows.Forms.ListBox ListBox_Marcas;
-        private System.Windows.Forms.ListBox ListBox_Categorias;
         private System.Windows.Forms.Label lbl_Max;
         private System.Windows.Forms.Label lbl_Min;
         private System.Windows.Forms.NumericUpDown Numeric_Max;
@@ -290,6 +288,8 @@
         private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
         private System.Windows.Forms.Label lbl_Marcas;
         private System.Windows.Forms.Label lbl_Categoria;
+        private System.Windows.Forms.ComboBox comboBoxMarcas;
+        private System.Windows.Forms.ComboBox comboBoxCategorias;
     }
 }
 

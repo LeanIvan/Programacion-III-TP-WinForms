@@ -23,6 +23,9 @@ namespace Vista
         public void inicializar()
         {
 
+          
+
+
 
 
         }
