@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controlador;
+
 
 namespace Vista
 {
@@ -30,8 +32,10 @@ namespace Vista
 
         }
 
-
-
-
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            ClontroladorArticulo controlador = new ClontroladorArticulo();
+            dgvList.DataSource = controlador.Listar();
+        }
     }
 }

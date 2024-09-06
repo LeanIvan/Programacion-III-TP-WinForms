@@ -10,9 +10,7 @@ namespace Modelo
     public class AccesoDatos
     {
         private SqlConnection conexion;
-
         private SqlCommand comando;
-
         private SqlDataReader lector;
 
         public SqlDataReader Lector
@@ -23,7 +21,7 @@ namespace Modelo
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true");
+            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
             comando = new SqlCommand();
         }
 

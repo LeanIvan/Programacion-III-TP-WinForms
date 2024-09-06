@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvList = new System.Windows.Forms.DataGridView();
             this.GroupBox_Filtro = new System.Windows.Forms.GroupBox();
             this.comboBoxMarcas = new System.Windows.Forms.ComboBox();
@@ -61,10 +63,27 @@
             this.dgvList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvList.ColumnHeadersHeight = 27;
+            this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvList.EnableHeadersVisualStyles = false;
+            this.dgvList.GridColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgvList.Location = new System.Drawing.Point(244, 39);
             this.dgvList.Name = "dgvList";
-            this.dgvList.Size = new System.Drawing.Size(544, 399);
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvList.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvList.Size = new System.Drawing.Size(677, 473);
             this.dgvList.TabIndex = 0;
             // 
             // GroupBox_Filtro
@@ -81,7 +100,7 @@
             this.GroupBox_Filtro.Controls.Add(this.lbl_Min);
             this.GroupBox_Filtro.Location = new System.Drawing.Point(12, 39);
             this.GroupBox_Filtro.Name = "GroupBox_Filtro";
-            this.GroupBox_Filtro.Size = new System.Drawing.Size(157, 399);
+            this.GroupBox_Filtro.Size = new System.Drawing.Size(157, 473);
             this.GroupBox_Filtro.TabIndex = 1;
             this.GroupBox_Filtro.TabStop = false;
             this.GroupBox_Filtro.Text = "Filtros";
@@ -161,13 +180,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBox_Buscar.Location = new System.Drawing.Point(244, 12);
             this.txtBox_Buscar.Name = "txtBox_Buscar";
-            this.txtBox_Buscar.Size = new System.Drawing.Size(375, 20);
+            this.txtBox_Buscar.Size = new System.Drawing.Size(508, 20);
             this.txtBox_Buscar.TabIndex = 2;
             // 
             // btn_Buscar
             // 
             this.btn_Buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Buscar.Location = new System.Drawing.Point(625, 10);
+            this.btn_Buscar.Location = new System.Drawing.Point(758, 10);
             this.btn_Buscar.Name = "btn_Buscar";
             this.btn_Buscar.Size = new System.Drawing.Size(163, 23);
             this.btn_Buscar.TabIndex = 3;
@@ -181,7 +200,7 @@
             this.eliminarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(831, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(964, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -245,7 +264,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 487);
+            this.ClientSize = new System.Drawing.Size(964, 561);
             this.Controls.Add(this.btn_Buscar);
             this.Controls.Add(this.txtBox_Buscar);
             this.Controls.Add(this.GroupBox_Filtro);
@@ -255,6 +274,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
             this.GroupBox_Filtro.ResumeLayout(false);
             this.GroupBox_Filtro.PerformLayout();
