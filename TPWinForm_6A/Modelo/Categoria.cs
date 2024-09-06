@@ -9,6 +9,15 @@ namespace Modelo
     public class Categoria
     {
 
+        public int Id { get;}
+        public string Descripcion { get;}
+
+
+        public Categoria(int id,string descripcion )
+        {
+            Id = id;
+            Descripcion = descripcion;  
+        }
 
 
     }
