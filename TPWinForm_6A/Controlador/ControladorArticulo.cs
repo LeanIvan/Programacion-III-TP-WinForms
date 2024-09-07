@@ -47,8 +47,32 @@ namespace Controlador
 
         public void Insertar(Articulo articulo)
         {
+            AccesoDatos datos = new AccesoDatos();
 
 
+            try
+            {
+
+                datos.setearConsulta("insert into ARTICULOS (Codigo,Nombre,Descripcion,Precio,IdCategoria,IdMarca) values (@Codigo,@Nombre,@Descripcion,@Precio,@IdCategoria,@IdMarca)");
+                datos.setearParametro("Codigo", articulo.Codigo);
+                datos.setearParametro("Nombre", articulo.Nombre);
+                datos.setearParametro("Descripcion", articulo.Descripcion);
+                datos.setearParametro("Precio", articulo.Precio);
+                datos.setearParametro("IdCategoria", articulo.IdCategoria);
+                datos.setearParametro("IdMarca", articulo.IdCategoria);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+
+            }
 
         }
 

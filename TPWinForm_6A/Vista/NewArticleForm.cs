@@ -44,6 +44,27 @@ namespace Vista
             /// insercion en base de datos
             /// 
 
+            Articulo art = new Articulo();
+            ControladorArticulo controladorArticulo = new ControladorArticulo();
+
+            try
+            {
+                art.Nombre = textBoxNombre.Text;
+                art.Codigo = textBoxCodigo.Text;
+                art.Precio = int.Parse(textBoxPrecio.Text);
+                art.Descripcion = textBoxDescripcion.Text;
+
+                controladorArticulo.Insertar(art);
+                MessageBox.Show("Articulo agregado correctamente");
+                Close();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
          
             
            
