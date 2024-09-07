@@ -44,6 +44,12 @@ namespace Vista
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            cargar();
+
+        }
+
+        private void cargar()
+        {
             ControladorArticulo controlador = new ControladorArticulo();
             dgvList.DataSource = controlador.Listar();
             ControladorCategoria controladorCategoria = new ControladorCategoria();
@@ -59,12 +65,12 @@ namespace Vista
 
                 //listo categorias
                 comboBoxCategorias.DataSource = controladorCategoria.Listar();
-               // comboBoxCategorias.ValueMember = "Id";
-               // comboBoxCategorias.DisplayMember = "Descripcion";
+                // comboBoxCategorias.ValueMember = "Id";
+                // comboBoxCategorias.DisplayMember = "Descripcion";
                 // listo marcas
                 comboBoxMarcas.DataSource = ControladorMarca.Listar();
-               // comboBoxMarcas.ValueMember = "Id";
-               // comboBoxMarcas.DisplayMember = "Descripcion";
+                // comboBoxMarcas.ValueMember = "Id";
+                // comboBoxMarcas.DisplayMember = "Descripcion";
 
             }
             catch (Exception ex)
@@ -152,6 +158,7 @@ namespace Vista
 
                 
                 frm.ShowDialog();
+                cargar();
 
             }
 
@@ -207,9 +214,18 @@ namespace Vista
             }
         }
 
+        private void artículoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            // me quedo con el articulo seleccionado
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvList.CurrentRow.DataBoundItem;
 
 
-
+            NewArticleForm modificar = new NewArticleForm(seleccionado);
+            modificar.ShowDialog();
+            cargar();   
+        }
     }
 
 

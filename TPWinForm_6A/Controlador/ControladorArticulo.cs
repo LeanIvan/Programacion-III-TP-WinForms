@@ -12,9 +12,9 @@ namespace Controlador
     public class ControladorArticulo
     {
 
-      public List<Articulo> Listar()
+        public List<Articulo> Listar()
         {
-            List<Articulo>lista = new List<Articulo>();
+            List<Articulo> lista = new List<Articulo>();
 
             AccesoDatos Ad = new AccesoDatos();
 
@@ -40,7 +40,7 @@ namespace Controlador
 
             Ad.cerrarConexion();
 
-            return lista; 
+            return lista;
 
         }
 
@@ -59,7 +59,7 @@ namespace Controlador
                 datos.setearParametro("Descripcion", articulo.Descripcion);
                 datos.setearParametro("Precio", articulo.Precio);
                 datos.setearParametro("IdCategoria", articulo.IdCategoria);
-                datos.setearParametro("IdMarca", articulo.IdCategoria);
+                datos.setearParametro("IdMarca", articulo.IdMarca);
                 datos.ejecutarAccion();
 
             }
@@ -76,9 +76,34 @@ namespace Controlador
 
         }
 
+        public void Modificar(Articulo articulo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            datos.setearConsulta("update ARTICULOS set Codigo = @codigo, Descripcion = @descripcion, IdMarca = @idmarca, IdCategoria = @idcategoria, Precio = @precio where Id = @id");
+            datos.setearParametro("@codigo", articulo.Codigo);
+            datos.setearParametro("@descripcion", articulo.Descripcion);
+            datos.setearParametro("@idmarca", articulo.IdMarca);
+            datos.setearParametro("@idcategoria", articulo.IdCategoria);
+            datos.setearParametro("@precio", articulo.Precio);
+            datos.setearParametro("@id", articulo.Id);
+            datos.ejecutarAccion();
 
-      
 
 
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

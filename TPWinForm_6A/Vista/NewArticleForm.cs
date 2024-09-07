@@ -18,16 +18,25 @@ namespace Vista
        private ControladorMarca controladorMarca;
         private ControladorCategoria controladorCategoria;
 
+        private Articulo articulo = null;
+
         public NewArticleForm()
         {
             controladorMarca = new ControladorMarca();
             controladorCategoria = new ControladorCategoria();
 
-            InitializeComponent();
+            InitializeComponent();      
 
             
 
 
+        }
+
+        public NewArticleForm(Articulo art)
+        {
+            InitializeComponent();
+            this.articulo = art;
+            Text = "Modificar Articulo";
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -44,18 +53,38 @@ namespace Vista
             /// insercion en base de datos
             /// 
 
-            Articulo art = new Articulo();
+            //Articulo art = new Articulo();
             ControladorArticulo controladorArticulo = new ControladorArticulo();
 
             try
             {
-                art.Nombre = textBoxNombre.Text;
-                art.Codigo = textBoxCodigo.Text;
-                art.Precio = int.Parse(textBoxPrecio.Text);
-                art.Descripcion = textBoxDescripcion.Text;
+                //Si llegaste hasta aca con el articulo en null, es porque es un articulo nuevo
+                if (articulo == null)
+                {
+                    articulo = new Articulo();
+                }
 
-                controladorArticulo.Insertar(art);
-                MessageBox.Show("Articulo agregado correctamente");
+                articulo.Nombre = textBoxNombre.Text;
+                articulo.Codigo = textBoxCodigo.Text;
+                articulo.Precio = decimal.Parse(textBoxPrecio.Text);
+                articulo.Descripcion = textBoxDescripcion.Text;
+                articulo.IdMarca = (int)comboBoxMarca.SelectedValue;
+                articulo.IdCategoria = (int)comboBoxCategoria.SelectedValue;
+                // Agregar Marca y Categoria
+
+
+                if (articulo.Id != 0)
+                {
+                    controladorArticulo.Modificar(articulo);
+                    MessageBox.Show("Articulo modificado correctamente");
+                }
+                else
+                {
+                    controladorArticulo.Insertar(articulo);
+                    MessageBox.Show("Articulo agregado correctamente");
+
+                }
+
                 Close();
 
             }
@@ -65,7 +94,7 @@ namespace Vista
                 MessageBox.Show(ex.ToString());
             }
 
-         
+            
             
            
 
@@ -78,15 +107,42 @@ namespace Vista
         private void NewArticleForm_Load(object sender, EventArgs e)
         {
 
-            comboBoxMarca.DataSource = controladorMarca.Listar();
-            comboBoxCategoria.DataSource = controladorCategoria.Listar();
+            ControladorCategoria controladorCategoria = new ControladorCategoria();
+            ControladorMarca controladorMarca = new ControladorMarca();
+
+            try
+            {
+                comboBoxMarca.DataSource = controladorMarca.Listar();
+                comboBoxCategoria.DisplayMember = "Descripcion";
+                comboBoxCategoria.ValueMember = "Id";
+
+                comboBoxCategoria.DataSource = controladorCategoria.Listar();
+                comboBoxMarca.DisplayMember = "Descripcion";
+                comboBoxMarca.ValueMember = "Id";
+
+                if (articulo != null)
+                {
+                    textBoxNombre.Text = articulo.Nombre;
+                    textBoxCodigo.Text = articulo.Codigo;
+                    textBoxPrecio.Text = articulo.Precio.ToString();
+                    textBoxDescripcion.Text = articulo.Descripcion;
+                    comboBoxMarca.SelectedValue = articulo.IdMarca;
+                    comboBoxCategoria.SelectedValue = articulo.IdCategoria;
+                }
 
 
-            comboBoxCategoria.DisplayMember = "Descripcion";
-            comboBoxCategoria.ValueMember = "Id";
+            }
+            catch (Exception ex)
+            {
 
-            comboBoxMarca.DisplayMember = "Descripcion";
-            comboBoxMarca.ValueMember = "Id";
+                MessageBox.Show(ex.ToString());
+            }
+
+
+
+
+           
+
 
 
         }
