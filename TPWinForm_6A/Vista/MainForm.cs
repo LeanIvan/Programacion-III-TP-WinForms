@@ -36,6 +36,26 @@ namespace Vista
         {
             ClontroladorArticulo controlador = new ClontroladorArticulo();
             dgvList.DataSource = controlador.Listar();
+            ControladorCategoria controladorCategoria = new ControladorCategoria();
+            ControladorMarca ControladorMarca = new ControladorMarca();
+            try
+            {
+
+                //listo categorias
+                comboBoxCategorias.DataSource = controladorCategoria.Listar();
+                comboBoxCategorias.ValueMember = "Id";
+                comboBoxCategorias.DisplayMember = "Descripcion";
+                // listo marcas
+                comboBoxMarcas.DataSource = ControladorMarca.Listar();
+                comboBoxMarcas.ValueMember = "Id";
+                comboBoxMarcas.DisplayMember = "Descripcion";
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

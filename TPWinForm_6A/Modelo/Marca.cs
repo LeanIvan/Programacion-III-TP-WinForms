@@ -8,8 +8,8 @@ namespace Modelo
 {
     public class Marca
     { 
-        public int Id { get; }
-        public string Descripcion { get; }  
+        public int Id { get; set; }
+        public string Descripcion { get; set; }  
 
 
 
@@ -18,6 +18,11 @@ namespace Modelo
        
             Id = id;
            Descripcion = descripcion;
+        }
+
+        public Marca()
+        {
+
         }
 
     }
