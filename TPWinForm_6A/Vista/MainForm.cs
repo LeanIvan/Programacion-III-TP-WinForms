@@ -59,12 +59,12 @@ namespace Vista
 
                 //listo categorias
                 comboBoxCategorias.DataSource = controladorCategoria.Listar();
-                comboBoxCategorias.ValueMember = "Id";
-                comboBoxCategorias.DisplayMember = "Descripcion";
+               // comboBoxCategorias.ValueMember = "Id";
+               // comboBoxCategorias.DisplayMember = "Descripcion";
                 // listo marcas
                 comboBoxMarcas.DataSource = ControladorMarca.Listar();
-                comboBoxMarcas.ValueMember = "Id";
-                comboBoxMarcas.DisplayMember = "Descripcion";
+               // comboBoxMarcas.ValueMember = "Id";
+               // comboBoxMarcas.DisplayMember = "Descripcion";
 
             }
             catch (Exception ex)
