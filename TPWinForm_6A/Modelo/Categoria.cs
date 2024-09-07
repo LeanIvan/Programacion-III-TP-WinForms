@@ -18,10 +18,12 @@ namespace Modelo
             Id = id;
             Descripcion = descripcion;  
         }
-        
-        public Categoria()
-        {
 
+        public Categoria() { }
+
+        public override string ToString()
+        {
+            return Descripcion;
         }
 
 

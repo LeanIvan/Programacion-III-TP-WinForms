@@ -41,8 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClontroladorArticulo.cs" />
+    <Compile Include="ControladorArticulo.cs" />
     <Compile Include="ControladorCategoria.cs" />
+    <Compile Include="ControladorImagen.cs" />
     <Compile Include="ControladorMarca.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

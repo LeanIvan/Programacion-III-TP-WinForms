@@ -9,7 +9,7 @@ using Modelo;
 
 namespace Controlador
 {
-    public class ClontroladorArticulo
+    public class ControladorArticulo
     {
 
       public List<Articulo> Listar()

@@ -13,17 +13,22 @@ namespace Modelo
 
 
 
-
         public Marca(int id , string descripcion) { 
        
             Id = id;
            Descripcion = descripcion;
         }
 
-        public Marca()
+        public Marca() { }
+
+
+        public override string ToString()
         {
+            return Descripcion;
 
         }
+
+      
 
     }
 }
