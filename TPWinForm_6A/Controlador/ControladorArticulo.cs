@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -103,6 +104,69 @@ namespace Controlador
             finally
             {
                 datos.cerrarConexion();
+            }
+
+
+
+
+        }
+
+
+        public void Eliminar(int id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("DELETE FROM ARTICULOS WHERE id = @id");
+                datos.setearParametro("@id",id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+        //FILTRADO POR NOMBRE EXACTO , FALTA LO DEMAS , EN PROCESO...
+        public List<Articulo> Filtrar(string busquedaNombre, string seleccionCategoria, string seleccionMarca)
+        {   
+            List<Articulo> listaFiltrada = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                string Consulta = "select Id, Codigo, Nombre , Descripcion , IdMarca , IdCategoria , Precio FROM ARTICULOS WHERE Nombre like '" + busquedaNombre + "'";
+                //RESTO DE LA CONSULTA , DA ERROR...
+                //AND IdMarca = " + seleccionMarca + "AND IdCategoria=" + seleccionCategoria
+
+                datos.setearConsulta(Consulta);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+
+                    Articulo aux = new Articulo();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.IdMarca = (int)datos.Lector["IdMarca"];
+                    aux.IdCategoria = (int)datos.Lector["IdCategoria"];
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+
+
+                    listaFiltrada.Add(aux);
+                }
+
+                return listaFiltrada;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
         }
     }

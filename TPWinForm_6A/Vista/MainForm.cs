@@ -22,8 +22,6 @@ namespace Vista
           
         }
 
-
-
         public void inicializarControles()
         {
 
@@ -226,7 +224,70 @@ namespace Vista
             modificar.ShowDialog();
             cargar();   
         }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            ControladorArticulo Controlador = new ControladorArticulo();
+
+
+            try
+            {
+                DialogResult Respuesta = MessageBox.Show("¿Esta Seguro/a?", "Eliminando...", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (Respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgvList.CurrentRow.DataBoundItem;
+                    Controlador.Eliminar(seleccionado.Id);
+                    cargar();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btn_Buscar_Click(object sender, EventArgs e)
+        {
+            ControladorArticulo Controlador = new ControladorArticulo();
+
+            try
+            {
+
+                string busquedaNombre = txtBox_Buscar.Text;
+                string SeleccionCategoria = comboBoxCategorias.Text;
+                string SeleccionMarca = comboBoxMarcas.Text; 
+
+                //int SeleccionCategoria = Convert.ToInt32(comboBoxCategorias.SelectedValue);
+                //int SeleccionMarca = Convert.ToInt32(comboBoxMarcas.SelectedValue);
+                
+                
+
+                dgvList.DataSource = Controlador.Filtrar(busquedaNombre, SeleccionCategoria, SeleccionMarca);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void comboBoxCategorias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string SeleccionCategoria = comboBoxCategorias.SelectedItem.ToString();
+            
+
+        }
+
+        private void comboBoxMarcas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string SeleccionMarca = comboBoxCategorias.SelectedItem.ToString();
+        }
     }
-
-
 }
