@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controlador;
 using Modelo;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Vista
 {
@@ -60,15 +61,16 @@ namespace Vista
 
             try
             {
+                
 
                 //listo categorias
                 comboBoxCategorias.DataSource = controladorCategoria.Listar();
-                // comboBoxCategorias.ValueMember = "Id";
-                // comboBoxCategorias.DisplayMember = "Descripcion";
+                comboBoxCategorias.ValueMember = "Id";
+                comboBoxCategorias.DisplayMember = "Descripcion";
                 // listo marcas
                 comboBoxMarcas.DataSource = ControladorMarca.Listar();
-                // comboBoxMarcas.ValueMember = "Id";
-                // comboBoxMarcas.DisplayMember = "Descripcion";
+                comboBoxMarcas.ValueMember = "Id";
+                comboBoxMarcas.DisplayMember = "Descripcion";
 
             }
             catch (Exception ex)
@@ -76,8 +78,6 @@ namespace Vista
 
                 MessageBox.Show(ex.ToString());
             }
-
-
 
             dgvList.Rows[0].Selected = true;
 
@@ -258,16 +258,18 @@ namespace Vista
             {
 
                 string busquedaNombre = txtBox_Buscar.Text;
-                string SeleccionCategoria = comboBoxCategorias.Text;
-                string SeleccionMarca = comboBoxMarcas.Text; 
+                int SeleccionCategoria = Convert.ToInt32(comboBoxCategorias.SelectedValue.ToString());
+                int SeleccionMarca = Convert.ToInt32(comboBoxMarcas.SelectedValue.ToString());
+                decimal min = Numeric_Min.Value;
+                decimal max = Numeric_Max.Value;
+                bool filtros = false;
 
-                //int SeleccionCategoria = Convert.ToInt32(comboBoxCategorias.SelectedValue);
-                //int SeleccionMarca = Convert.ToInt32(comboBoxMarcas.SelectedValue);
-                
-                
+                if (RB_ActivarFiltros.Checked == true)
+                {   
+                    filtros = true;                
+                }
 
-                dgvList.DataSource = Controlador.Filtrar(busquedaNombre, SeleccionCategoria, SeleccionMarca);
-
+                dgvList.DataSource = Controlador.Filtrar(busquedaNombre, SeleccionCategoria, SeleccionMarca, min, max, filtros);
 
             }
             catch (Exception ex)

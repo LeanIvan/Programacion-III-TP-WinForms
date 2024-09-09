@@ -105,10 +105,6 @@ namespace Controlador
             {
                 datos.cerrarConexion();
             }
-
-
-
-
         }
 
 
@@ -130,17 +126,41 @@ namespace Controlador
 
         }
 
-        //FILTRADO POR NOMBRE EXACTO , FALTA LO DEMAS , EN PROCESO...
-        public List<Articulo> Filtrar(string busquedaNombre, string seleccionCategoria, string seleccionMarca)
+        //FILTRO TERMINADO - TIPS PARA BUSCAR
+        //----------------------------------------------------------------------------------------------------------
+        //*SI SE BUSCA CON LOS FILTROS DESACTIVADOS : SOLAMENTE BUSCA POR EL NOMBRE.
+        //*SI SE BUSCA CON LOS FILTROS ACTIVADOS Y POR UN NOMBRE : UTILIZA LAS DOS COSAS PARA FILTRAR.
+        //*SI SE BUSCA CON LOS FILTROS ACTIVADOS Y SIN NOMBRE : FILTRA SOLAMENTE CON LOS PARAMETROS DE LA IZQUIERDA.
+        //*SI SE BUSCA CON LOS FILTROS DESACTIVDADOS Y SIN NOMBRE : LISTA NUEVAMENTE LA GRILLA SIN FILTRO ALGUNO.
+        public List<Articulo> Filtrar(string busquedaNombre, int seleccionCategoria, int seleccionMarca , decimal min , decimal max , bool filtros)
         {   
             List<Articulo> listaFiltrada = new List<Articulo>();
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                string Consulta = "select Id, Codigo, Nombre , Descripcion , IdMarca , IdCategoria , Precio FROM ARTICULOS WHERE Nombre like '" + busquedaNombre + "'";
-                //RESTO DE LA CONSULTA , DA ERROR...
-                //AND IdMarca = " + seleccionMarca + "AND IdCategoria=" + seleccionCategoria
+
+                string Consulta = "select Id, Codigo, Nombre , Descripcion , IdMarca , IdCategoria , Precio FROM ARTICULOS";
+
+                if (filtros == true && busquedaNombre!= "")
+                {
+                    Consulta = "select Id, Codigo, Nombre , Descripcion , IdMarca , IdCategoria , Precio FROM ARTICULOS WHERE Nombre like '" + busquedaNombre + "' AND IdMarca = " + seleccionMarca + "AND IdCategoria= " + seleccionCategoria + "AND Precio > " + min + "AND Precio < " + max;
+                }
+                
+                if(filtros == false && busquedaNombre!="")
+                {
+                    Consulta = "select Id, Codigo, Nombre , Descripcion , IdMarca , IdCategoria , Precio FROM ARTICULOS WHERE Nombre like '" + busquedaNombre +"'";
+                }
+                
+                if(filtros == true && busquedaNombre=="")
+                {
+                    Consulta = "select Id, Codigo, Nombre , Descripcion , IdMarca , IdCategoria , Precio FROM ARTICULOS WHERE IdMarca = " + seleccionMarca + "AND IdCategoria= " + seleccionCategoria + "AND Precio > " + min + "AND Precio < " + max;
+                }
+
+                if (filtros == false && busquedaNombre=="")
+                {
+                    Listar();
+                }
 
                 datos.setearConsulta(Consulta);
                 datos.ejecutarLectura();
