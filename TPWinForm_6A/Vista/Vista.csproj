@@ -58,6 +58,18 @@
     <Compile Include="FormDetalle.Designer.cs">
       <DependentUpon>FormDetalle.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaCategorias.Designer.cs">
+      <DependentUpon>ListaCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaMarcas.Designer.cs">
+      <DependentUpon>ListaMarcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +101,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetalle.resx">
       <DependentUpon>FormDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaCategorias.resx">
+      <DependentUpon>ListaCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaMarcas.resx">
+      <DependentUpon>ListaMarcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

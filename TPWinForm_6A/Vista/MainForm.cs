@@ -291,5 +291,17 @@ namespace Vista
         {
             string SeleccionMarca = comboBoxCategorias.SelectedItem.ToString();
         }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form ListaCategorias = new ListaCategorias();
+            ListaCategorias.ShowDialog();
+        }
+
+        private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form ListaMarcas = new ListaMarcas();
+            ListaMarcas.ShowDialog();
+        }
     }
 }
