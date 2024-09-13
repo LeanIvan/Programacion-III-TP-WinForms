@@ -52,9 +52,11 @@ namespace Vista
 
             comboBoxCategoria.DisplayMember = "Descripcion";
             comboBoxCategoria.ValueMember = "Id";
+            //comboBoxCategoria.Enabled = false;
 
             comboBoxMarca.DisplayMember = "Descripcion";
             comboBoxMarca.ValueMember = "Id";
+            //comboBoxCategoria.Enabled = false;
 
        
             comboBoxCategoria.SelectedValue = art.IdCategoria; 

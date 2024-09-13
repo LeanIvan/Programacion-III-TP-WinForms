@@ -215,14 +215,33 @@ namespace Vista
         private void artículoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            // me quedo con el articulo seleccionado
-            Articulo seleccionado;
-            seleccionado = (Articulo)dgvList.CurrentRow.DataBoundItem;
+            try
+            {
+
+                if (dgvList.CurrentRow == null)
+                {
+                    throw new Exception("Debe seleccionar algún articulo");
+
+                }
+                    
+
+                // me quedo con el articulo seleccionado
+                Articulo seleccionado;
+                seleccionado = (Articulo)dgvList.CurrentRow.DataBoundItem;
 
 
-            NewArticleForm modificar = new NewArticleForm(seleccionado);
-            modificar.ShowDialog();
-            cargar();   
+                NewArticleForm modificar = new NewArticleForm(seleccionado);
+                modificar.ShowDialog();
+                cargar();
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Debe seleccionar algún articulo");
+            }
+
+  
         }
 
         private void btn_Eliminar_Click(object sender, EventArgs e)

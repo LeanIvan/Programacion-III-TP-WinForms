@@ -88,7 +88,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvList.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvList.Size = new System.Drawing.Size(677, 473);
-            this.dgvList.TabIndex = 0;
+            this.dgvList.TabIndex = 3;
             this.dgvList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvList_MouseDoubleClick);
             // 
             // GroupBox_Filtro
@@ -118,7 +118,7 @@
             this.RB_Desactivarfiltros.Location = new System.Drawing.Point(55, 33);
             this.RB_Desactivarfiltros.Name = "RB_Desactivarfiltros";
             this.RB_Desactivarfiltros.Size = new System.Drawing.Size(76, 17);
-            this.RB_Desactivarfiltros.TabIndex = 11;
+            this.RB_Desactivarfiltros.TabIndex = 1;
             this.RB_Desactivarfiltros.TabStop = true;
             this.RB_Desactivarfiltros.Text = "Desactivar";
             this.RB_Desactivarfiltros.UseVisualStyleBackColor = true;
@@ -130,7 +130,7 @@
             this.RB_ActivarFiltros.Location = new System.Drawing.Point(55, 10);
             this.RB_ActivarFiltros.Name = "RB_ActivarFiltros";
             this.RB_ActivarFiltros.Size = new System.Drawing.Size(61, 17);
-            this.RB_ActivarFiltros.TabIndex = 10;
+            this.RB_ActivarFiltros.TabIndex = 0;
             this.RB_ActivarFiltros.TabStop = true;
             this.RB_ActivarFiltros.Text = "Activar ";
             this.RB_ActivarFiltros.UseVisualStyleBackColor = true;
@@ -142,7 +142,7 @@
             this.comboBoxMarcas.Location = new System.Drawing.Point(6, 178);
             this.comboBoxMarcas.Name = "comboBoxMarcas";
             this.comboBoxMarcas.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxMarcas.TabIndex = 9;
+            this.comboBoxMarcas.TabIndex = 3;
             this.comboBoxMarcas.SelectedIndexChanged += new System.EventHandler(this.comboBoxMarcas_SelectedIndexChanged);
             // 
             // comboBoxCategorias
@@ -152,7 +152,7 @@
             this.comboBoxCategorias.Location = new System.Drawing.Point(6, 114);
             this.comboBoxCategorias.Name = "comboBoxCategorias";
             this.comboBoxCategorias.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxCategorias.TabIndex = 5;
+            this.comboBoxCategorias.TabIndex = 2;
             this.comboBoxCategorias.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategorias_SelectedIndexChanged);
             // 
             // lbl_Marcas
@@ -227,7 +227,7 @@
             this.txtBox_Buscar.Location = new System.Drawing.Point(244, 12);
             this.txtBox_Buscar.Name = "txtBox_Buscar";
             this.txtBox_Buscar.Size = new System.Drawing.Size(508, 20);
-            this.txtBox_Buscar.TabIndex = 2;
+            this.txtBox_Buscar.TabIndex = 1;
             // 
             // btn_Buscar
             // 
@@ -235,7 +235,7 @@
             this.btn_Buscar.Location = new System.Drawing.Point(758, 10);
             this.btn_Buscar.Name = "btn_Buscar";
             this.btn_Buscar.Size = new System.Drawing.Size(163, 23);
-            this.btn_Buscar.TabIndex = 3;
+            this.btn_Buscar.TabIndex = 2;
             this.btn_Buscar.Text = "Buscar";
             this.btn_Buscar.UseVisualStyleBackColor = true;
             this.btn_Buscar.Click += new System.EventHandler(this.btn_Buscar_Click);
@@ -249,7 +249,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(964, 24);
-            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // agregarToolStripMenuItem
@@ -265,21 +265,21 @@
             // productoToolStripMenuItem
             // 
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            this.productoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productoToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.productoToolStripMenuItem.Text = "Articulo";
             this.productoToolStripMenuItem.Click += new System.EventHandler(this.productoToolStripMenuItem_Click);
             // 
             // marcaToolStripMenuItem
             // 
             this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
-            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.marcaToolStripMenuItem.Text = "Marca";
             this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click);
             // 
             // categoríaToolStripMenuItem
             // 
             this.categoríaToolStripMenuItem.Name = "categoríaToolStripMenuItem";
-            this.categoríaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoríaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.categoríaToolStripMenuItem.Text = "Categoría";
             this.categoríaToolStripMenuItem.Click += new System.EventHandler(this.categoríaToolStripMenuItem_Click);
             // 
@@ -302,14 +302,14 @@
             // categoriasToolStripMenuItem
             // 
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.categoriasToolStripMenuItem.Text = "Categorias";
             this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
             // 
             // marcasToolStripMenuItem
             // 
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.marcasToolStripMenuItem.Text = "Marcas";
             this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 

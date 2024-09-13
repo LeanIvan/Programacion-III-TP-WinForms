@@ -80,8 +80,9 @@ namespace Controlador
         public void Modificar(Articulo articulo)
         {
             AccesoDatos datos = new AccesoDatos();
-            datos.setearConsulta("update ARTICULOS set Codigo = @codigo, Descripcion = @descripcion, IdMarca = @idmarca, IdCategoria = @idcategoria, Precio = @precio where Id = @id");
+            datos.setearConsulta("update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idmarca, IdCategoria = @idcategoria, Precio = @precio where Id = @id");
             datos.setearParametro("@codigo", articulo.Codigo);
+            datos.setearParametro("@nombre", articulo.Nombre);
             datos.setearParametro("@descripcion", articulo.Descripcion);
             datos.setearParametro("@idmarca", articulo.IdMarca);
             datos.setearParametro("@idcategoria", articulo.IdCategoria);

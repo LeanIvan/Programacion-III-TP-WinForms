@@ -59,14 +59,14 @@
             this.textBoxPrecio.Location = new System.Drawing.Point(41, 115);
             this.textBoxPrecio.Name = "textBoxPrecio";
             this.textBoxPrecio.Size = new System.Drawing.Size(145, 20);
-            this.textBoxPrecio.TabIndex = 1;
+            this.textBoxPrecio.TabIndex = 2;
             // 
             // textBoxCodigo
             // 
             this.textBoxCodigo.Location = new System.Drawing.Point(41, 71);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(226, 20);
-            this.textBoxCodigo.TabIndex = 2;
+            this.textBoxCodigo.TabIndex = 1;
             // 
             // comboBoxMarca
             // 
@@ -90,14 +90,14 @@
             this.textBoxDescripcion.Multiline = true;
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(226, 81);
-            this.textBoxDescripcion.TabIndex = 5;
+            this.textBoxDescripcion.TabIndex = 6;
             // 
             // buttonAceptar
             // 
             this.buttonAceptar.Location = new System.Drawing.Point(41, 393);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(101, 28);
-            this.buttonAceptar.TabIndex = 6;
+            this.buttonAceptar.TabIndex = 7;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = true;
             this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
@@ -107,7 +107,7 @@
             this.buttonCancelar.Location = new System.Drawing.Point(157, 393);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(110, 28);
-            this.buttonCancelar.TabIndex = 7;
+            this.buttonCancelar.TabIndex = 8;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
@@ -117,7 +117,7 @@
             this.buttonVerImagen.Location = new System.Drawing.Point(192, 255);
             this.buttonVerImagen.Name = "buttonVerImagen";
             this.buttonVerImagen.Size = new System.Drawing.Size(75, 23);
-            this.buttonVerImagen.TabIndex = 8;
+            this.buttonVerImagen.TabIndex = 16;
             this.buttonVerImagen.Text = "Ver Imagen";
             this.buttonVerImagen.UseVisualStyleBackColor = true;
             this.buttonVerImagen.Click += new System.EventHandler(this.buttonVerImagen_Click);
@@ -127,7 +127,7 @@
             this.textBoxImagen.Location = new System.Drawing.Point(41, 255);
             this.textBoxImagen.Name = "textBoxImagen";
             this.textBoxImagen.Size = new System.Drawing.Size(145, 20);
-            this.textBoxImagen.TabIndex = 9;
+            this.textBoxImagen.TabIndex = 5;
             // 
             // labelNombre
             // 

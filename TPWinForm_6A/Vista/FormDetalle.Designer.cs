@@ -59,11 +59,16 @@
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(443, 95);
             this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.ReadOnly = true;
             this.textBoxNombre.Size = new System.Drawing.Size(198, 20);
             this.textBoxNombre.TabIndex = 1;
             // 
             // comboBoxMarca
             // 
+            this.comboBoxMarca.AllowDrop = true;
+            this.comboBoxMarca.Cursor = System.Windows.Forms.Cursors.Default;
+            this.comboBoxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboBoxMarca.Enabled = false;
             this.comboBoxMarca.FormattingEnabled = true;
             this.comboBoxMarca.Location = new System.Drawing.Point(443, 146);
             this.comboBoxMarca.Name = "comboBoxMarca";
@@ -72,6 +77,9 @@
             // 
             // comboBoxCategoria
             // 
+            this.comboBoxCategoria.AllowDrop = true;
+            this.comboBoxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboBoxCategoria.Enabled = false;
             this.comboBoxCategoria.FormattingEnabled = true;
             this.comboBoxCategoria.Location = new System.Drawing.Point(443, 199);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
@@ -119,7 +127,7 @@
             this.buttonAceptar.Location = new System.Drawing.Point(456, 394);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(117, 23);
-            this.buttonAceptar.TabIndex = 8;
+            this.buttonAceptar.TabIndex = 5;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = true;
             this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
@@ -129,7 +137,7 @@
             this.buttonCancelar.Location = new System.Drawing.Point(589, 394);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(117, 23);
-            this.buttonCancelar.TabIndex = 9;
+            this.buttonCancelar.TabIndex = 6;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
@@ -149,14 +157,15 @@
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.ReadOnly = true;
             this.textBoxId.Size = new System.Drawing.Size(198, 20);
-            this.textBoxId.TabIndex = 11;
+            this.textBoxId.TabIndex = 0;
             // 
             // textBoxPrecio
             // 
             this.textBoxPrecio.Location = new System.Drawing.Point(445, 254);
             this.textBoxPrecio.Name = "textBoxPrecio";
+            this.textBoxPrecio.ReadOnly = true;
             this.textBoxPrecio.Size = new System.Drawing.Size(127, 20);
-            this.textBoxPrecio.TabIndex = 12;
+            this.textBoxPrecio.TabIndex = 4;
             // 
             // labelPrecio
             // 
@@ -191,8 +200,6 @@
             this.MinimizeBox = false;
             this.Name = "FormDetalle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Detalle";
-           
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDetalle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
