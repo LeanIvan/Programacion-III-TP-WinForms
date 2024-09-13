@@ -145,12 +145,12 @@ namespace Controlador
 
                 if (filtros == true && busquedaNombre!= "")
                 {
-                    Consulta = "select Id, Codigo, Nombre , Descripcion , IdMarca , IdCategoria , Precio FROM ARTICULOS WHERE Nombre like '" + busquedaNombre + "' AND IdMarca = " + seleccionMarca + "AND IdCategoria= " + seleccionCategoria + "AND Precio > " + min + "AND Precio < " + max;
+                    Consulta = "select Id, Codigo, Nombre , Descripcion , IdMarca , IdCategoria , Precio FROM ARTICULOS WHERE Nombre like '%" + busquedaNombre + "%' AND IdMarca = " + seleccionMarca + "AND IdCategoria= " + seleccionCategoria + "AND Precio > " + min + "AND Precio < " + max;
                 }
                 
                 if(filtros == false && busquedaNombre!="")
                 {
-                    Consulta = "select Id, Codigo, Nombre , Descripcion , IdMarca , IdCategoria , Precio FROM ARTICULOS WHERE Nombre like '" + busquedaNombre +"'";
+                    Consulta = "select Id, Codigo, Nombre , Descripcion , IdMarca , IdCategoria , Precio FROM ARTICULOS WHERE Nombre like '%" + busquedaNombre +"%'";
                 }
                 
                 if(filtros == true && busquedaNombre=="")

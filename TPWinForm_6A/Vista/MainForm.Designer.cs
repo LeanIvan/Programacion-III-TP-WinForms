@@ -115,6 +115,7 @@
             // RB_Desactivarfiltros
             // 
             this.RB_Desactivarfiltros.AutoSize = true;
+            this.RB_Desactivarfiltros.Checked = true;
             this.RB_Desactivarfiltros.Location = new System.Drawing.Point(55, 33);
             this.RB_Desactivarfiltros.Name = "RB_Desactivarfiltros";
             this.RB_Desactivarfiltros.Size = new System.Drawing.Size(76, 17);
@@ -126,12 +127,10 @@
             // RB_ActivarFiltros
             // 
             this.RB_ActivarFiltros.AutoSize = true;
-            this.RB_ActivarFiltros.Checked = true;
             this.RB_ActivarFiltros.Location = new System.Drawing.Point(55, 10);
             this.RB_ActivarFiltros.Name = "RB_ActivarFiltros";
             this.RB_ActivarFiltros.Size = new System.Drawing.Size(61, 17);
             this.RB_ActivarFiltros.TabIndex = 0;
-            this.RB_ActivarFiltros.TabStop = true;
             this.RB_ActivarFiltros.Text = "Activar ";
             this.RB_ActivarFiltros.UseVisualStyleBackColor = true;
             // 
@@ -265,21 +264,21 @@
             // productoToolStripMenuItem
             // 
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            this.productoToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.productoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productoToolStripMenuItem.Text = "Articulo";
             this.productoToolStripMenuItem.Click += new System.EventHandler(this.productoToolStripMenuItem_Click);
             // 
             // marcaToolStripMenuItem
             // 
             this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
-            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.marcaToolStripMenuItem.Text = "Marca";
             this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click);
             // 
             // categoríaToolStripMenuItem
             // 
             this.categoríaToolStripMenuItem.Name = "categoríaToolStripMenuItem";
-            this.categoríaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.categoríaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.categoríaToolStripMenuItem.Text = "Categoría";
             this.categoríaToolStripMenuItem.Click += new System.EventHandler(this.categoríaToolStripMenuItem_Click);
             // 
@@ -302,14 +301,14 @@
             // categoriasToolStripMenuItem
             // 
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.categoriasToolStripMenuItem.Text = "Categorias";
             this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
             // 
             // marcasToolStripMenuItem
             // 
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.marcasToolStripMenuItem.Text = "Marcas";
             this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
