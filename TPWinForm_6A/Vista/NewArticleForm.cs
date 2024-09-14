@@ -47,6 +47,51 @@ namespace Vista
 
         }
 
+
+        private bool validarCarga()
+        {
+
+            if (string.IsNullOrEmpty(textBoxNombre.Text))
+            {
+                MessageBox.Show("El artículo debe tener un nombre...");
+                return true;
+            }
+
+
+            if (string.IsNullOrEmpty(textBoxCodigo.Text))
+            {
+                MessageBox.Show("El artículo debe tener un código...");
+                return true;
+            }
+
+
+            if (string.IsNullOrEmpty(textBoxDescripcion.Text))
+            {
+                MessageBox.Show("El artículo debe tener una descripción...");
+                return true;
+            }
+
+
+
+            if (!(soloNumeros(textBoxPrecio.Text))){
+                MessageBox.Show("El precio solo debe contener números...");
+                return true;
+            }   
+            return false;
+        }
+
+        private bool soloNumeros(string cadena)
+        {
+
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                    return false;
+            }
+            return true;
+        }
+
+
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
 
@@ -58,6 +103,11 @@ namespace Vista
 
             try
             {
+                if (validarCarga())
+                    return;
+
+
+
                 //Si llegaste hasta aca con el articulo en null, es porque es un articulo nuevo
                 if (articulo == null)
                 {
