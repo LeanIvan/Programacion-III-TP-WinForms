@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvList = new System.Windows.Forms.DataGridView();
             this.GroupBox_Filtro = new System.Windows.Forms.GroupBox();
             this.RB_Desactivarfiltros = new System.Windows.Forms.RadioButton();
@@ -47,13 +47,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.categoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Eliminar = new System.Windows.Forms.Button();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.GroupBox_Filtro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Numeric_Max)).BeginInit();
@@ -68,25 +67,25 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvList.ColumnHeadersHeight = 27;
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvList.EnableHeadersVisualStyles = false;
             this.dgvList.GridColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgvList.Location = new System.Drawing.Point(244, 39);
             this.dgvList.Name = "dgvList";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvList.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvList.Size = new System.Drawing.Size(677, 473);
             this.dgvList.TabIndex = 3;
             this.dgvList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvList_MouseDoubleClick);
@@ -244,7 +243,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarToolStripMenuItem,
             this.toolStripMenuModificar,
-            this.modificarToolStripMenuItem});
+            this.modificarToolStripMenuItem,
+            this.acercaDeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(964, 24);
@@ -254,9 +254,7 @@
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.productoToolStripMenuItem,
-            this.marcaToolStripMenuItem,
-            this.categoríaToolStripMenuItem});
+            this.productoToolStripMenuItem});
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
             this.agregarToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.agregarToolStripMenuItem.Text = "Agregar";
@@ -267,20 +265,6 @@
             this.productoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productoToolStripMenuItem.Text = "Articulo";
             this.productoToolStripMenuItem.Click += new System.EventHandler(this.productoToolStripMenuItem_Click);
-            // 
-            // marcaToolStripMenuItem
-            // 
-            this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
-            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.marcaToolStripMenuItem.Text = "Marca";
-            this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click);
-            // 
-            // categoríaToolStripMenuItem
-            // 
-            this.categoríaToolStripMenuItem.Name = "categoríaToolStripMenuItem";
-            this.categoríaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.categoríaToolStripMenuItem.Text = "Categoría";
-            this.categoríaToolStripMenuItem.Click += new System.EventHandler(this.categoríaToolStripMenuItem_Click);
             // 
             // toolStripMenuModificar
             // 
@@ -301,14 +285,14 @@
             // categoriasToolStripMenuItem
             // 
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.categoriasToolStripMenuItem.Text = "Categorias";
             this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
             // 
             // marcasToolStripMenuItem
             // 
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.marcasToolStripMenuItem.Text = "Marcas";
             this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
@@ -321,6 +305,13 @@
             this.btn_Eliminar.Text = "ELIMINAR";
             this.btn_Eliminar.UseVisualStyleBackColor = true;
             this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
+            // 
+            // acercaDeToolStripMenuItem
+            // 
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.acercaDeToolStripMenuItem.Text = "Acerca de";
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -359,8 +350,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem categoríaToolStripMenuItem;
         private System.Windows.Forms.Label lbl_Max;
         private System.Windows.Forms.Label lbl_Min;
         private System.Windows.Forms.NumericUpDown Numeric_Max;
@@ -376,6 +365,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuModificar;
         private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
     }
 }
 

@@ -164,40 +164,6 @@ namespace Vista
 
         }
 
-        private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            /// abrir ventana para agregar nueva marca
-            /// 
-
-            using (NewMarcaForm frm = new NewMarcaForm() )
-            {
-              
-              if( frm.ShowDialog() == DialogResult.OK)
-                {
-                    MessageBox.Show("Marca Agregada con Exito");
-
-                }
-
-            }
-
-        }
-
-        private void categoríaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            /// abrir ventana para agregar nueva categoría
-            /// 
-
-            using (NewCategoryForm frm = new NewCategoryForm())
-            {
-
-             if( frm.ShowDialog() == DialogResult.OK ) {
-
-                    MessageBox.Show("Categoria agregada con exito");
-
-                }
-
-            }
-        }
 
 
 
@@ -321,6 +287,12 @@ namespace Vista
         {
             Form ListaMarcas = new ListaMarcas();
             ListaMarcas.ShowDialog();
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form AcercaDe = new AcercaDe();
+            AcercaDe.ShowDialog();
         }
     }
 }
