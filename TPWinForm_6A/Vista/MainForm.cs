@@ -249,15 +249,15 @@ namespace Vista
                 decimal max = Numeric_Max.Value;
                 bool filtros = false;
 
-                if (min>max || max==0)
-                {
-                    MessageBox.Show("Si el precio mínimo es mayor al máximo o el precio máximo es igual a 0, no encontrará coincidencias.");
-                
-                }
-
                 if (RB_ActivarFiltros.Checked == true)
                 {   
-                    filtros = true;                
+                    filtros = true;
+
+                    if (min > max || max == 0)
+                    {
+                        MessageBox.Show("Si el precio mínimo es mayor al máximo o el precio máximo es igual a 0, no encontrará coincidencias.");
+
+                    }
                 }
 
                 dgvList.DataSource = Controlador.Filtrar(busquedaNombre, SeleccionCategoria, SeleccionMarca, min, max, filtros);
