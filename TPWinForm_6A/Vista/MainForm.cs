@@ -249,6 +249,12 @@ namespace Vista
                 decimal max = Numeric_Max.Value;
                 bool filtros = false;
 
+                if (min>max || max==0)
+                {
+                    MessageBox.Show("Si el precio mínimo es mayor al máximo o el precio máximo es igual a 0, no encontrará coincidencias.");
+                
+                }
+
                 if (RB_ActivarFiltros.Checked == true)
                 {   
                     filtros = true;                
@@ -293,6 +299,13 @@ namespace Vista
         {
             Form AcercaDe = new AcercaDe();
             AcercaDe.ShowDialog();
+        }
+
+        private void btn_Instrucciones_Click(object sender, EventArgs e)
+        {
+
+            Form Instrucciones = new Instrucciones();
+            Instrucciones.ShowDialog();
         }
     }
 }

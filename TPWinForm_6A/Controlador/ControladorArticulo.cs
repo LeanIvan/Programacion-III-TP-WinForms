@@ -132,7 +132,7 @@ namespace Controlador
         //*SI SE BUSCA CON LOS FILTROS DESACTIVADOS : SOLAMENTE BUSCA POR EL NOMBRE.
         //*SI SE BUSCA CON LOS FILTROS ACTIVADOS Y POR UN NOMBRE : UTILIZA LAS DOS COSAS PARA FILTRAR.
         //*SI SE BUSCA CON LOS FILTROS ACTIVADOS Y SIN NOMBRE : FILTRA SOLAMENTE CON LOS PARAMETROS DE LA IZQUIERDA.
-        //*SI SE BUSCA CON LOS FILTROS DESACTIVDADOS Y SIN NOMBRE : LISTA NUEVAMENTE LA GRILLA SIN FILTRO ALGUNO.
+        //*SI SE BUSCA CON LOS FILTROS DESACTIVADOS Y SIN NOMBRE : LISTA NUEVAMENTE LA GRILLA SIN FILTRO ALGUNO.
         public List<Articulo> Filtrar(string busquedaNombre, int seleccionCategoria, int seleccionMarca , decimal min , decimal max , bool filtros)
         {   
             List<Articulo> listaFiltrada = new List<Articulo>();
